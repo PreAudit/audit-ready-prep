@@ -6,85 +6,101 @@ const Index = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-security-muted to-background">
+    <div className="min-h-screen bg-gradient-to-br from-background via-security-muted to-background relative overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-grid-pattern opacity-[0.02]" />
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-primary/10 to-security/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-r from-security/10 to-primary/10 rounded-full blur-3xl" />
+      
       {/* Hero Section */}
-      <div className="container mx-auto px-6 py-20 flex flex-col items-center justify-center min-h-screen text-center">
+      <div className="container mx-auto px-6 py-20 flex flex-col items-center justify-center min-h-screen text-center relative z-10">
         
         {/* Brand Name */}
-        <h1 className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-primary via-security to-primary bg-clip-text text-transparent">
-          PreAudit
-        </h1>
+        <div className="relative mb-8">
+          <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-primary via-security to-primary bg-clip-text text-transparent animate-in fade-in slide-in-from-bottom-4 duration-1000">
+            PreAudit
+          </h1>
+          <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-security/20 rounded-lg blur-xl opacity-30" />
+        </div>
 
         {/* Tagline */}
-        <p className="text-xl md:text-2xl text-muted-foreground mb-10 max-w-2xl font-medium">
+        <p className="text-xl md:text-2xl text-muted-foreground mb-10 max-w-2xl font-medium animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-200">
           Get audit-ready the way serious protocols do
         </p>
 
         {/* Body Text */}
-        <p className="text-lg text-foreground/80 mb-16 max-w-3xl leading-relaxed">
+        <p className="text-lg text-foreground/80 mb-16 max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-300">
           We build the test suites, fuzzing setups, and invariant campaigns your auditors expect — so they can focus on what really matters
         </p>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-8 mb-20">
+        <div className="flex flex-col sm:flex-row gap-6 mb-20 animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-500">
           <Button 
             variant="primary" 
             size="lg" 
-            className="group"
+            className="group relative overflow-hidden bg-gradient-to-r from-primary to-primary-glow hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 transform hover:scale-105"
             onClick={() => navigate("/learn-more")}
           >
-            <Zap className="w-5 h-5 mr-2 group-hover:animate-pulse" />
-            Learn more
+            <div className="absolute inset-0 bg-gradient-to-r from-primary-glow to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <Zap className="w-5 h-5 mr-2 group-hover:animate-pulse relative z-10" />
+            <span className="relative z-10">Learn more</span>
           </Button>
           
           <Button 
             variant="outline" 
             size="lg"
-            className="group border-security/20 hover:border-security/40 hover:bg-security-muted/50"
+            className="group relative overflow-hidden border-2 border-security/30 hover:border-security/60 hover:bg-security-muted/30 backdrop-blur-sm transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-security/20"
             onClick={() => window.open('https://github.com/clement-ux/portfolio', '_blank')}
           >
-            <Shield className="w-5 h-5 mr-2 group-hover:animate-pulse" />
-            See our previous work
-            <ExternalLink className="w-4 h-4 ml-2" />
+            <div className="absolute inset-0 bg-gradient-to-r from-security/5 to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <Shield className="w-5 h-5 mr-2 group-hover:animate-pulse relative z-10" />
+            <span className="relative z-10">See our previous work</span>
+            <ExternalLink className="w-4 h-4 ml-2 relative z-10" />
           </Button>
 
           <Button 
             variant="secondary" 
             size="lg"
-            className="group"
+            className="group relative overflow-hidden bg-gradient-to-r from-secondary to-accent hover:from-accent hover:to-secondary transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-secondary/20"
             onClick={() => navigate("/contact")}
           >
-            <Mail className="w-5 h-5 mr-2 group-hover:animate-pulse" />
-            Contact Us
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-security/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <Mail className="w-5 h-5 mr-2 group-hover:animate-pulse relative z-10" />
+            <span className="relative z-10">Contact Us</span>
           </Button>
         </div>
 
-        {/* Subtle Feature Hints */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl text-center">
-          <div className="p-8 rounded-lg bg-card/50 border border-security/10 backdrop-blur-sm">
-            <div className="w-12 h-12 mx-auto mb-6 rounded-full bg-gradient-to-r from-primary to-security flex items-center justify-center">
-              <Shield className="w-6 h-6 text-white" />
+        {/* Enhanced Feature Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl text-center animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-700">
+          <div className="group p-8 rounded-2xl bg-card/60 border border-security/20 backdrop-blur-md hover:border-security/40 transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-security/10">
+            <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-primary to-security flex items-center justify-center shadow-lg shadow-primary/25 group-hover:shadow-primary/40 transition-all duration-300">
+              <Shield className="w-8 h-8 text-white" />
             </div>
-            <h3 className="font-semibold text-foreground mb-4">Comprehensive Testing</h3>
-            <p className="text-sm text-muted-foreground">Unit tests and invariant testing to catch vulnerabilities early</p>
+            <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-primary transition-colors">Comprehensive Testing</h3>
+            <p className="text-muted-foreground leading-relaxed">Unit tests and invariant testing to catch vulnerabilities early</p>
           </div>
           
-          <div className="p-8 rounded-lg bg-card/50 border border-security/10 backdrop-blur-sm">
-            <div className="w-12 h-12 mx-auto mb-6 rounded-full bg-gradient-to-r from-security to-primary flex items-center justify-center">
-              <DollarSign className="w-6 h-6 text-white" />
+          <div className="group p-8 rounded-2xl bg-card/60 border border-security/20 backdrop-blur-md hover:border-security/40 transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-security/10">
+            <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-security to-primary flex items-center justify-center shadow-lg shadow-security/25 group-hover:shadow-security/40 transition-all duration-300">
+              <DollarSign className="w-8 h-8 text-white" />
             </div>
-            <h3 className="font-semibold text-foreground mb-4">Cheaper Audits</h3>
-            <p className="text-sm text-muted-foreground">Book fewer auditors for shorter periods with proper preparation</p>
+            <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-security transition-colors">Cheaper Audits</h3>
+            <p className="text-muted-foreground leading-relaxed">Book fewer auditors for shorter periods with proper preparation</p>
           </div>
           
-          <div className="p-8 rounded-lg bg-card/50 border border-security/10 backdrop-blur-sm">
-            <div className="w-12 h-12 mx-auto mb-6 rounded-full bg-gradient-to-r from-primary to-security flex items-center justify-center">
-              <ExternalLink className="w-6 h-6 text-white" />
+          <div className="group p-8 rounded-2xl bg-card/60 border border-security/20 backdrop-blur-md hover:border-security/40 transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-security/10">
+            <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-primary to-security flex items-center justify-center shadow-lg shadow-primary/25 group-hover:shadow-primary/40 transition-all duration-300">
+              <ExternalLink className="w-8 h-8 text-white" />
             </div>
-            <h3 className="font-semibold text-foreground mb-4">Actionable Reports</h3>
-            <p className="text-sm text-muted-foreground">Clear documentation with proof-of-concept scenarios</p>
+            <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-primary transition-colors">Actionable Reports</h3>
+            <p className="text-muted-foreground leading-relaxed">Clear documentation with proof-of-concept scenarios</p>
           </div>
         </div>
+
+        {/* Floating Elements */}
+        <div className="absolute top-20 left-10 w-4 h-4 bg-primary/30 rounded-full animate-pulse" />
+        <div className="absolute top-40 right-20 w-6 h-6 bg-security/30 rounded-full animate-pulse delay-1000" />
+        <div className="absolute bottom-40 left-20 w-3 h-3 bg-primary/40 rounded-full animate-pulse delay-500" />
       </div>
     </div>
   );
