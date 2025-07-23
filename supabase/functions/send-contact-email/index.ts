@@ -30,23 +30,23 @@ const handler = async (req: Request): Promise<Response> => {
     const emailResponse = await resend.emails.send({
       from: "Contact Form <onboarding@resend.dev>",
       to: ["dev.solidity.eth@gmail.com"],
-      subject: `Nouveau message de contact de ${name}`,
+      subject: `New contact message from ${name}`,
       html: `
-        <h2>Nouveau message de contact</h2>
-        <p><strong>Nom:</strong> ${name}</p>
-        ${organization ? `<p><strong>Organisation:</strong> ${organization}</p>` : ''}
+        <h2>New Contact Message</h2>
+        <p><strong>Name:</strong> ${name}</p>
+        ${organization ? `<p><strong>Organization:</strong> ${organization}</p>` : ''}
         <p><strong>Contact:</strong> ${contact}</p>
         <p><strong>Description:</strong></p>
         <p>${description.replace(/\n/g, '<br>')}</p>
         ${budget ? `<p><strong>Budget:</strong> ${budget}</p>` : ''}
         <hr>
-        <p><em>Message envoyé depuis le formulaire de contact PreAudit</em></p>
+        <p><em>Message sent from PreAudit contact form</em></p>
       `,
     });
 
     console.log("Email sent successfully:", emailResponse);
 
-    return new Response(JSON.stringify({ success: true, message: "Email envoyé avec succès" }), {
+    return new Response(JSON.stringify({ success: true, message: "Email sent successfully" }), {
       status: 200,
       headers: {
         "Content-Type": "application/json",

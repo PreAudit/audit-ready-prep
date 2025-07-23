@@ -52,12 +52,12 @@ const ContactForm = ({ onClose }: ContactFormProps) => {
         throw error;
       }
       
-      toast.success("Message envoyé avec succès ! Nous vous répondrons dans les 24h.");
+      toast.success("Thank you! We'll get back to you within 24 hours.");
       reset();
       onClose?.();
     } catch (error) {
       console.error("Error submitting form:", error);
-      toast.error("Erreur lors de l'envoi. Veuillez réessayer.");
+      toast.error("Something went wrong. Please try again.");
     } finally {
       setIsSubmitting(false);
     }
