@@ -22,7 +22,7 @@ const Index = () => {
 
         {/* Body Text */}
         <p className="text-lg text-foreground/80 mb-16 max-w-3xl leading-relaxed">
-          We build the test suites, fuzzing setups, and invariants your auditors expect — so they can focus on what really matters
+          We build the test suites, fuzzing setups, and invariant campaigns your auditors expect — so they can focus on what really matters
         </p>
 
         {/* CTA Buttons */}
@@ -41,7 +41,7 @@ const Index = () => {
             variant="outline" 
             size="lg"
             className="group border-security/20 hover:border-security/40 hover:bg-security-muted/50"
-            onClick={() => window.open('#', '_blank')}
+            onClick={() => window.open('https://github.com/clement-ux/portfolio', '_blank')}
           >
             <Shield className="w-5 h-5 mr-2 group-hover:animate-pulse" />
             See our previous work
