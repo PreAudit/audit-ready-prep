@@ -9,6 +9,7 @@ import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { toast } from "sonner";
 import { Send, X } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 
 const contactSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -39,19 +40,24 @@ const ContactForm = ({ onClose }: ContactFormProps) => {
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
     
-    // Simulate form submission
     try {
-      // Here you would typically send to your backend or email service
-      console.log("Form data:", data);
+      console.log("Sending contact email with data:", data);
       
-      // For now, we'll just show a success message
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      const { error } = await supabase.functions.invoke('send-contact-email', {
+        body: data
+      });
+
+      if (error) {
+        console.error("Error sending email:", error);
+        throw error;
+      }
       
-      toast.success("Thank you! We'll get back to you within 24 hours.");
+      toast.success("Message envoyé avec succès ! Nous vous répondrons dans les 24h.");
       reset();
       onClose?.();
     } catch (error) {
-      toast.error("Something went wrong. Please try again.");
+      console.error("Error submitting form:", error);
+      toast.error("Erreur lors de l'envoi. Veuillez réessayer.");
     } finally {
       setIsSubmitting(false);
     }
