@@ -151,7 +151,7 @@ const LearnMore = () => {
               variant="primary" 
               size="lg"
               className="group"
-              onClick={() => window.open('https://t.me/Clement_Moller', '_blank')}
+              onClick={() => navigate('/contact')}
             >
               <Shield className="w-5 h-5 mr-2 group-hover:animate-pulse" />
               Contact Us
