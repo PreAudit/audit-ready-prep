@@ -35,7 +35,7 @@ const LearnMore = () => {
               <h2 className="text-2xl md:text-3xl font-bold text-foreground">What is PreAudit?</h2>
             </div>
             <p className="text-lg text-foreground/80 leading-relaxed">
-              <strong>PreAudit</strong> helps DeFi projects become fully prepared for their initial security audits by proactively identifying and addressing vulnerabilities through thorough unit and invariant testing. By tackling the basics upfront, we ensure that professional auditors can efficiently focus on more sophisticated and critical security threats.
+              <strong>PreAudit</strong> helps DeFi protocols become fully prepared for their initial security audits by proactively identifying and addressing vulnerabilities through thorough unit and invariant testing. By tackling the basics upfront, we ensure that professional auditors can efficiently focus on more sophisticated and critical security threats.
             </p>
           </section>
 
@@ -112,7 +112,7 @@ const LearnMore = () => {
                 <h2 className="text-xl md:text-2xl font-bold text-foreground">Who Should Use PreAudit?</h2>
               </div>
               <p className="text-lg text-foreground/80 leading-relaxed">
-                We primarily assist early-stage DeFi projects and teams preparing for their first security audit, delivering high-quality, affordable, and effective security preparation.
+                We primarily assist early-stage DeFi protocols and teams preparing for their first security audit, delivering high-quality, affordable, and effective security preparation.
               </p>
             </section>
           </div>
@@ -145,7 +145,7 @@ const LearnMore = () => {
           <section className="text-center p-12 rounded-lg bg-gradient-to-r from-primary/10 via-security/10 to-primary/10 border border-security/20">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">Get Started</h2>
             <p className="text-xl text-foreground/80 mb-8 max-w-2xl mx-auto">
-              Reach out today and let <strong>PreAudit</strong> ensure your blockchain project is fully prepared and ready for its audit.
+              Reach out today and let <strong>PreAudit</strong> ensure your DeFi protocol is fully prepared and ready for its audit.
             </p>
             <Button 
               variant="primary" 
