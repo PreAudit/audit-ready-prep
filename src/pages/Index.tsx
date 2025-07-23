@@ -61,39 +61,39 @@ const Index = () => {
           <Button 
             variant="secondary" 
             size="lg"
-            className="group relative overflow-hidden bg-gradient-to-r from-secondary to-accent hover:from-accent hover:to-secondary transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-secondary/20"
+            className="group relative overflow-hidden bg-gradient-to-r from-security/20 to-primary/20 border-2 border-primary/40 hover:border-primary/70 hover:bg-gradient-to-r hover:from-primary/30 hover:to-security/30 transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-primary/30 backdrop-blur-sm"
             onClick={() => navigate("/contact")}
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-security/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            <Mail className="w-5 h-5 mr-2 group-hover:animate-pulse relative z-10" />
-            <span className="relative z-10">Contact Us</span>
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-security/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <Mail className="w-5 h-5 mr-2 group-hover:animate-pulse relative z-10 text-primary" />
+            <span className="relative z-10 font-semibold text-primary">Contact Us</span>
           </Button>
         </div>
 
         {/* Enhanced Feature Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl text-center animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-700">
-          <div className="group p-8 rounded-2xl bg-card/60 border border-security/20 backdrop-blur-md hover:border-security/40 transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-security/10">
-            <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-primary to-security flex items-center justify-center shadow-lg shadow-primary/25 group-hover:shadow-primary/40 transition-all duration-300">
-              <Shield className="w-8 h-8 text-white" />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl text-center animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-700">
+          <div className="group p-6 rounded-xl bg-card/60 border border-security/20 backdrop-blur-md hover:border-security/40 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-security/10">
+            <div className="w-12 h-12 mx-auto mb-4 rounded-xl bg-gradient-to-br from-primary to-security flex items-center justify-center shadow-lg shadow-primary/25 group-hover:shadow-primary/40 transition-all duration-300">
+              <Shield className="w-6 h-6 text-white" />
             </div>
-            <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-primary transition-colors">Comprehensive Testing</h3>
-            <p className="text-muted-foreground leading-relaxed">Unit tests and invariant testing to catch vulnerabilities early</p>
+            <h3 className="font-semibold text-lg text-foreground mb-3 group-hover:text-primary transition-colors">Comprehensive Testing</h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">Unit tests and invariant testing to catch vulnerabilities early</p>
           </div>
           
-          <div className="group p-8 rounded-2xl bg-card/60 border border-security/20 backdrop-blur-md hover:border-security/40 transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-security/10">
-            <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-security to-primary flex items-center justify-center shadow-lg shadow-security/25 group-hover:shadow-security/40 transition-all duration-300">
-              <DollarSign className="w-8 h-8 text-white" />
+          <div className="group p-6 rounded-xl bg-card/60 border border-security/20 backdrop-blur-md hover:border-security/40 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-security/10">
+            <div className="w-12 h-12 mx-auto mb-4 rounded-xl bg-gradient-to-br from-security to-primary flex items-center justify-center shadow-lg shadow-security/25 group-hover:shadow-security/40 transition-all duration-300">
+              <DollarSign className="w-6 h-6 text-white" />
             </div>
-            <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-security transition-colors">Cheaper Audits</h3>
-            <p className="text-muted-foreground leading-relaxed">Book fewer auditors for shorter periods with proper preparation</p>
+            <h3 className="font-semibold text-lg text-foreground mb-3 group-hover:text-security transition-colors">Cheaper Audits</h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">Book fewer auditors for shorter periods with proper preparation</p>
           </div>
           
-          <div className="group p-8 rounded-2xl bg-card/60 border border-security/20 backdrop-blur-md hover:border-security/40 transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-security/10">
-            <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-primary to-security flex items-center justify-center shadow-lg shadow-primary/25 group-hover:shadow-primary/40 transition-all duration-300">
-              <ExternalLink className="w-8 h-8 text-white" />
+          <div className="group p-6 rounded-xl bg-card/60 border border-security/20 backdrop-blur-md hover:border-security/40 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-security/10">
+            <div className="w-12 h-12 mx-auto mb-4 rounded-xl bg-gradient-to-br from-primary to-security flex items-center justify-center shadow-lg shadow-primary/25 group-hover:shadow-primary/40 transition-all duration-300">
+              <ExternalLink className="w-6 h-6 text-white" />
             </div>
-            <h3 className="font-bold text-xl text-foreground mb-4 group-hover:text-primary transition-colors">Actionable Reports</h3>
-            <p className="text-muted-foreground leading-relaxed">Clear documentation with proof-of-concept scenarios</p>
+            <h3 className="font-semibold text-lg text-foreground mb-3 group-hover:text-primary transition-colors">Actionable Reports</h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">Clear documentation with proof-of-concept scenarios</p>
           </div>
         </div>
 
