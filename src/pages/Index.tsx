@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Shield, Zap, DollarSign } from "lucide-react";
+import { ExternalLink, Shield, Zap, DollarSign, Mail } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const Index = () => {
@@ -46,6 +46,16 @@ const Index = () => {
             <Shield className="w-5 h-5 mr-2 group-hover:animate-pulse" />
             See our previous work
             <ExternalLink className="w-4 h-4 ml-2" />
+          </Button>
+
+          <Button 
+            variant="secondary" 
+            size="lg"
+            className="group"
+            onClick={() => navigate("/contact")}
+          >
+            <Mail className="w-5 h-5 mr-2 group-hover:animate-pulse" />
+            Contact Us
           </Button>
         </div>
 
