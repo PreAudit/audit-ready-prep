@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Shield, Zap, DollarSign } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Index = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-security-muted to-background">
       {/* Hero Section */}
@@ -28,11 +31,10 @@ const Index = () => {
             variant="primary" 
             size="lg" 
             className="group"
-            onClick={() => window.open('#', '_blank')}
+            onClick={() => navigate("/learn-more")}
           >
             <Zap className="w-5 h-5 mr-2 group-hover:animate-pulse" />
             Learn more
-            <ExternalLink className="w-4 h-4 ml-2" />
           </Button>
           
           <Button 
