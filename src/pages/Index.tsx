@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Shield, Zap } from "lucide-react";
+import { ExternalLink, Shield, Zap, DollarSign } from "lucide-react";
 
 const Index = () => {
   return (
@@ -59,7 +59,7 @@ const Index = () => {
           
           <div className="p-8 rounded-lg bg-card/50 border border-security/10 backdrop-blur-sm">
             <div className="w-12 h-12 mx-auto mb-6 rounded-full bg-gradient-to-r from-security to-primary flex items-center justify-center">
-              <Zap className="w-6 h-6 text-white" />
+              <DollarSign className="w-6 h-6 text-white" />
             </div>
             <h3 className="font-semibold text-foreground mb-4">Cheaper Audits</h3>
             <p className="text-sm text-muted-foreground">Book fewer auditors for shorter periods with proper preparation</p>
