@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Shield, Zap } from "lucide-react";
-import preauditLogo from "@/assets/preaudit-logo-v2.png";
 
 const Index = () => {
   return (
@@ -8,16 +7,6 @@ const Index = () => {
       {/* Hero Section */}
       <div className="container mx-auto px-6 py-20 flex flex-col items-center justify-center min-h-screen text-center">
         
-        {/* Logo */}
-        <div className="mb-12 relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-primary to-security rounded-full blur-xl opacity-20 animate-pulse"></div>
-          <img 
-            src={preauditLogo} 
-            alt="PreAudit Logo" 
-            className="w-24 h-24 relative z-10 drop-shadow-lg"
-          />
-        </div>
-
         {/* Brand Name */}
         <h1 className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-primary via-security to-primary bg-clip-text text-transparent">
           PreAudit
