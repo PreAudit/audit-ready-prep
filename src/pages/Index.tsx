@@ -17,24 +17,24 @@ const Index = () => {
         
         {/* Brand Name */}
         <div className="relative mb-8">
-          <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-primary via-security to-primary bg-clip-text text-transparent animate-in fade-in slide-in-from-bottom-4 duration-1000">
+          <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-primary via-security to-primary bg-clip-text text-transparent">
             PreAudit
           </h1>
           <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-security/20 rounded-lg blur-xl opacity-30" />
         </div>
 
         {/* Tagline */}
-        <p className="text-xl md:text-2xl text-muted-foreground mb-10 max-w-2xl font-medium animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-200">
+        <p className="text-xl md:text-2xl text-muted-foreground mb-10 max-w-2xl font-medium">
           Get audit-ready the way serious protocols do
         </p>
 
         {/* Body Text */}
-        <p className="text-lg text-foreground/80 mb-16 max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-300">
+        <p className="text-lg text-foreground/80 mb-16 max-w-3xl leading-relaxed">
           We build the test suites, fuzzing setups, and invariant campaigns your auditors expect — so they can focus on what really matters
         </p>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-6 mb-20 animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-500">
+        <div className="flex flex-col sm:flex-row gap-6 mb-20">
           <Button 
             variant="primary" 
             size="lg" 
@@ -71,28 +71,28 @@ const Index = () => {
         </div>
 
         {/* Enhanced Feature Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl text-center animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-700">
-          <div className="group p-4 rounded-lg bg-card/60 border border-security/20 backdrop-blur-md hover:border-security/40 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-security/10">
-            <div className="w-10 h-10 mx-auto mb-3 rounded-lg bg-gradient-to-br from-primary to-security flex items-center justify-center shadow-lg shadow-primary/25 group-hover:shadow-primary/40 transition-all duration-300">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl text-center">
+          <div className="p-4 rounded-lg bg-card/60 border border-security/20 backdrop-blur-md">
+            <div className="w-10 h-10 mx-auto mb-3 rounded-lg bg-gradient-to-br from-primary to-security flex items-center justify-center shadow-lg shadow-primary/25">
               <Shield className="w-5 h-5 text-white" />
             </div>
-            <h3 className="font-semibold text-base text-foreground mb-2 group-hover:text-primary transition-colors">Comprehensive Testing</h3>
+            <h3 className="font-semibold text-base text-foreground mb-2">Comprehensive Testing</h3>
             <p className="text-xs text-muted-foreground leading-relaxed">Unit tests and invariant testing to catch vulnerabilities early</p>
           </div>
           
-          <div className="group p-4 rounded-lg bg-card/60 border border-security/20 backdrop-blur-md hover:border-security/40 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-security/10">
-            <div className="w-10 h-10 mx-auto mb-3 rounded-lg bg-gradient-to-br from-security to-primary flex items-center justify-center shadow-lg shadow-security/25 group-hover:shadow-security/40 transition-all duration-300">
+          <div className="p-4 rounded-lg bg-card/60 border border-security/20 backdrop-blur-md">
+            <div className="w-10 h-10 mx-auto mb-3 rounded-lg bg-gradient-to-br from-security to-primary flex items-center justify-center shadow-lg shadow-security/25">
               <DollarSign className="w-5 h-5 text-white" />
             </div>
-            <h3 className="font-semibold text-base text-foreground mb-2 group-hover:text-security transition-colors">Cheaper Audits</h3>
+            <h3 className="font-semibold text-base text-foreground mb-2">Cheaper Audits</h3>
             <p className="text-xs text-muted-foreground leading-relaxed">Book fewer auditors for shorter periods with proper preparation</p>
           </div>
           
-          <div className="group p-4 rounded-lg bg-card/60 border border-security/20 backdrop-blur-md hover:border-security/40 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-security/10">
-            <div className="w-10 h-10 mx-auto mb-3 rounded-lg bg-gradient-to-br from-primary to-security flex items-center justify-center shadow-lg shadow-primary/25 group-hover:shadow-primary/40 transition-all duration-300">
+          <div className="p-4 rounded-lg bg-card/60 border border-security/20 backdrop-blur-md">
+            <div className="w-10 h-10 mx-auto mb-3 rounded-lg bg-gradient-to-br from-primary to-security flex items-center justify-center shadow-lg shadow-primary/25">
               <ExternalLink className="w-5 h-5 text-white" />
             </div>
-            <h3 className="font-semibold text-base text-foreground mb-2 group-hover:text-primary transition-colors">Actionable Reports</h3>
+            <h3 className="font-semibold text-base text-foreground mb-2">Actionable Reports</h3>
             <p className="text-xs text-muted-foreground leading-relaxed">Clear documentation with proof-of-concept scenarios</p>
           </div>
         </div>
