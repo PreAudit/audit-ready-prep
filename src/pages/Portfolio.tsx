@@ -85,7 +85,7 @@ const Portfolio = () => {
     
     if (testType.includes("Unit")) {
       badges.push(
-        <Badge key="unit" variant="outline" className="bg-blue-500/20 text-blue-600 border-blue-500/30">
+        <Badge key="unit" variant="outline" className="bg-blue-600/20 text-blue-700 border-blue-600/40 font-medium">
           Unit test
         </Badge>
       );
@@ -93,16 +93,16 @@ const Portfolio = () => {
     
     if (testType.includes("Invariant")) {
       badges.push(
-        <Badge key="invariant" variant="outline" className="bg-primary/20 text-primary border-primary/30">
-          Invariant
+        <Badge key="invariant" variant="outline" className="bg-emerald-500/20 text-emerald-700 border-emerald-500/40 font-medium">
+          Invariant campaign
         </Badge>
       );
     }
     
     if (testType.includes("Fuzzing")) {
       badges.push(
-        <Badge key="fuzzing" variant="outline" className="bg-security/20 text-security border-security/30">
-          Fuzzing
+        <Badge key="fuzzing" variant="outline" className="bg-orange-500/20 text-orange-700 border-orange-500/40 font-medium">
+          Fuzzing test
         </Badge>
       );
     }
