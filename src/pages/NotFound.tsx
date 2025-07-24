@@ -5,10 +5,15 @@ const NotFound = () => {
   const location = useLocation();
 
   useEffect(() => {
-    console.error(
-      "404 Error: User attempted to access non-existent route:",
-      location.pathname
+    // Only log suspicious routes to avoid information disclosure
+    const suspiciousPatterns = ['/admin', '/api', '/.env', '/config'];
+    const isSuspicious = suspiciousPatterns.some(pattern => 
+      location.pathname.toLowerCase().includes(pattern)
     );
+    
+    if (isSuspicious) {
+      console.warn("404 - Suspicious route attempted:", location.pathname);
+    }
   }, [location.pathname]);
 
   return (
