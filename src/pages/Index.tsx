@@ -11,10 +11,10 @@ const Index = () => {
       <div className="absolute inset-0 bg-grid-pattern opacity-[0.02]" />
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-primary/10 to-security/10 rounded-full blur-3xl" />
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-r from-security/10 to-primary/10 rounded-full blur-3xl" />
-      
+
       {/* Hero Section */}
       <div className="container mx-auto px-6 py-20 flex flex-col items-center justify-center min-h-screen text-center relative z-10">
-        
+
         {/* Brand Name */}
         <div className="relative mb-8">
           <h1 className="text-5xl md:text-7xl font-bold flex items-baseline">
@@ -26,7 +26,7 @@ const Index = () => {
 
         {/* Tagline */}
         <p className="text-xl md:text-2xl text-muted-foreground mb-10 max-w-2xl font-medium">
-          Get audit-ready the way serious protocols do
+          Prepare your protocol for audit — so auditors can go deeper
         </p>
 
         {/* Body Text */}
@@ -36,9 +36,9 @@ const Index = () => {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-6 mb-20">
-          <Button 
-            variant="primary" 
-            size="lg" 
+          <Button
+            variant="primary"
+            size="lg"
             className="group relative overflow-hidden bg-gradient-to-r from-primary to-primary-glow hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 transform hover:scale-105"
             onClick={() => navigate("/learn-more")}
           >
@@ -46,9 +46,9 @@ const Index = () => {
             <Zap className="w-5 h-5 mr-2 group-hover:animate-pulse relative z-10" />
             <span className="relative z-10">Learn more</span>
           </Button>
-          
-          <Button 
-            variant="outline" 
+
+          <Button
+            variant="outline"
             size="lg"
             className="group relative overflow-hidden border-2 border-security/30 hover:border-security/60 hover:bg-security-muted/30 backdrop-blur-sm transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-security/20"
             onClick={() => window.open('https://github.com/clement-ux/portfolio', '_blank')}
@@ -59,8 +59,8 @@ const Index = () => {
             <ExternalLink className="w-4 h-4 ml-2 relative z-10" />
           </Button>
 
-          <Button 
-            variant="outline" 
+          <Button
+            variant="outline"
             size="lg"
             className="group relative overflow-hidden border-2 border-security/30 hover:border-security/60 hover:bg-security-muted/30 backdrop-blur-sm transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-security/20"
             onClick={() => navigate("/contact")}
@@ -80,7 +80,7 @@ const Index = () => {
             <h3 className="font-semibold text-foreground">Comprehensive Testing</h3>
             <p className="text-sm text-muted-foreground leading-relaxed max-w-48">Unit tests and invariant testing to catch vulnerabilities early</p>
           </div>
-          
+
           <div className="flex flex-col items-center space-y-3">
             <div className="w-12 h-12 rounded-full bg-gradient-to-br from-security/20 to-primary/20 flex items-center justify-center">
               <DollarSign className="w-6 h-6 text-security" />
@@ -88,7 +88,7 @@ const Index = () => {
             <h3 className="font-semibold text-foreground">Cheaper Audits</h3>
             <p className="text-sm text-muted-foreground leading-relaxed max-w-48">Book fewer auditors for shorter periods with proper preparation</p>
           </div>
-          
+
           <div className="flex flex-col items-center space-y-3">
             <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-security/20 flex items-center justify-center">
               <ExternalLink className="w-6 h-6 text-primary" />
