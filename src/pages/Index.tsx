@@ -31,7 +31,7 @@ const Index = () => {
 
         {/* Body Text */}
         <p className="text-lg text-foreground/80 mb-16 max-w-3xl leading-relaxed">
-          We build the test suites, fuzzing setups, and invariant campaigns that strengthen your codebase end to end, making the auditor’s job sharper and more impactful.
+          We build the test suites, fuzzing setups, and invariant campaigns that strengthen your codebase, making the auditor’s job sharper and more impactful.
         </p>
 
         {/* CTA Buttons */}
