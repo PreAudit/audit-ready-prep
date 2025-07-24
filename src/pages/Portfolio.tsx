@@ -80,14 +80,34 @@ const Portfolio = () => {
     }
   };
 
-  const getTestTypeColor = (testType: string) => {
-    if (testType.includes("Invariant")) {
-      return "bg-primary/20 text-primary border-primary/30";
-    } else if (testType.includes("Fuzzing")) {
-      return "bg-security/20 text-security border-security/30";
-    } else {
-      return "bg-muted text-muted-foreground border-muted/30";
+  const getTestTypeBadges = (testType: string) => {
+    const badges = [];
+    
+    if (testType.includes("Unit")) {
+      badges.push(
+        <Badge key="unit" variant="outline" className="bg-blue-500/20 text-blue-600 border-blue-500/30">
+          Unit test
+        </Badge>
+      );
     }
+    
+    if (testType.includes("Invariant")) {
+      badges.push(
+        <Badge key="invariant" variant="outline" className="bg-primary/20 text-primary border-primary/30">
+          Invariant
+        </Badge>
+      );
+    }
+    
+    if (testType.includes("Fuzzing")) {
+      badges.push(
+        <Badge key="fuzzing" variant="outline" className="bg-security/20 text-security border-security/30">
+          Fuzzing
+        </Badge>
+      );
+    }
+    
+    return badges;
   };
 
   return (
@@ -149,9 +169,7 @@ const Portfolio = () => {
                         {campaign.protocol}
                       </h3>
                       <div className="flex flex-wrap gap-2 mb-2">
-                        <Badge variant="outline" className={getTestTypeColor(campaign.testType)}>
-                          {campaign.testType}
-                        </Badge>
+                        {getTestTypeBadges(campaign.testType)}
                         <Badge variant="outline" className="bg-muted/50 text-muted-foreground border-muted/30">
                           <Calendar className="w-3 h-3 mr-1" />
                           {campaign.date}
@@ -225,20 +243,21 @@ const Portfolio = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="text-center mt-16 p-8 rounded-lg bg-gradient-to-r from-primary/5 to-security/5 border border-primary/20">
-          <h3 className="text-2xl font-bold text-foreground mb-4">
+        <section className="text-center mt-16 p-12 rounded-lg bg-gradient-to-r from-primary/10 via-security/10 to-primary/10 border border-security/20">
+          <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
             Ready to strengthen your protocol?
           </h3>
-          <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+          <p className="text-xl text-foreground/80 mb-8 max-w-2xl mx-auto">
             Let's discuss how comprehensive testing and invariant campaigns can prepare your codebase for a successful audit.
           </p>
           <Button
             variant="primary"
             size="lg"
-            className="bg-gradient-to-r from-primary to-primary-glow hover:shadow-lg hover:shadow-primary/25"
+            className="group"
             onClick={() => navigate("/contact")}
           >
-            Get in Touch
+            <Shield className="w-5 h-5 mr-2 group-hover:animate-pulse" />
+            Contact Us
           </Button>
         </section>
       </div>
