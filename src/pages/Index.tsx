@@ -84,8 +84,8 @@ const Index = () => {
             <div className="w-12 h-12 rounded-full bg-gradient-to-br from-security/20 to-primary/20 flex items-center justify-center">
               <DollarSign className="w-6 h-6 text-security" />
             </div>
-            <h3 className="font-semibold text-foreground">Cheaper Audits</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed max-w-48">Book fewer auditors for shorter periods with proper preparation</p>
+            <h3 className="font-semibold text-foreground">Audit Smarter, Not Harder</h3>
+            <p className="text-sm text-muted-foreground leading-relaxed max-w-48">Well-prepared code lets you book fewer hours with better outcomes.</p>
           </div>
 
           <div className="flex flex-col items-center space-y-3">
