@@ -17,7 +17,7 @@ const Index = () => {
 
         {/* Brand Name */}
         <div className="relative mb-8">
-          <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-primary to-security bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-7xl font-bold text-primary">
             PreAudit
           </h1>
           <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-security/20 rounded-lg blur-xl opacity-30" />
