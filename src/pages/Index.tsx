@@ -70,30 +70,30 @@ const Index = () => {
           </Button>
         </div>
 
-        {/* Enhanced Feature Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl text-center">
-          <div className="p-4 rounded-lg bg-card/60 border border-security/20 backdrop-blur-md">
-            <div className="w-10 h-10 mx-auto mb-3 rounded-lg bg-gradient-to-br from-primary to-security flex items-center justify-center shadow-lg shadow-primary/25">
-              <Shield className="w-5 h-5 text-white" />
+        {/* Feature Highlights */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl text-center">
+          <div className="flex flex-col items-center space-y-3">
+            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-security/20 flex items-center justify-center">
+              <Shield className="w-6 h-6 text-primary" />
             </div>
-            <h3 className="font-semibold text-base text-foreground mb-2">Comprehensive Testing</h3>
-            <p className="text-xs text-muted-foreground leading-relaxed">Unit tests and invariant testing to catch vulnerabilities early</p>
+            <h3 className="font-semibold text-foreground">Comprehensive Testing</h3>
+            <p className="text-sm text-muted-foreground leading-relaxed max-w-48">Unit tests and invariant testing to catch vulnerabilities early</p>
           </div>
           
-          <div className="p-4 rounded-lg bg-card/60 border border-security/20 backdrop-blur-md">
-            <div className="w-10 h-10 mx-auto mb-3 rounded-lg bg-gradient-to-br from-security to-primary flex items-center justify-center shadow-lg shadow-security/25">
-              <DollarSign className="w-5 h-5 text-white" />
+          <div className="flex flex-col items-center space-y-3">
+            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-security/20 to-primary/20 flex items-center justify-center">
+              <DollarSign className="w-6 h-6 text-security" />
             </div>
-            <h3 className="font-semibold text-base text-foreground mb-2">Cheaper Audits</h3>
-            <p className="text-xs text-muted-foreground leading-relaxed">Book fewer auditors for shorter periods with proper preparation</p>
+            <h3 className="font-semibold text-foreground">Cheaper Audits</h3>
+            <p className="text-sm text-muted-foreground leading-relaxed max-w-48">Book fewer auditors for shorter periods with proper preparation</p>
           </div>
           
-          <div className="p-4 rounded-lg bg-card/60 border border-security/20 backdrop-blur-md">
-            <div className="w-10 h-10 mx-auto mb-3 rounded-lg bg-gradient-to-br from-primary to-security flex items-center justify-center shadow-lg shadow-primary/25">
-              <ExternalLink className="w-5 h-5 text-white" />
+          <div className="flex flex-col items-center space-y-3">
+            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-security/20 flex items-center justify-center">
+              <ExternalLink className="w-6 h-6 text-primary" />
             </div>
-            <h3 className="font-semibold text-base text-foreground mb-2">Actionable Reports</h3>
-            <p className="text-xs text-muted-foreground leading-relaxed">Clear documentation with proof-of-concept scenarios</p>
+            <h3 className="font-semibold text-foreground">Actionable Reports</h3>
+            <p className="text-sm text-muted-foreground leading-relaxed max-w-48">Clear documentation with proof-of-concept scenarios</p>
           </div>
         </div>
 
