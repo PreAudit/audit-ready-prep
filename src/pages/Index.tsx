@@ -50,7 +50,7 @@ const Index = () => {
             variant="outline"
             size="lg"
             className="group relative overflow-hidden border-2 border-security/30 hover:border-security/60 hover:bg-security-muted/30 backdrop-blur-sm transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-security/20"
-            onClick={() => window.open('https://github.com/clement-ux/portfolio', '_blank')}
+            onClick={() => navigate("/portfolio")}
           >
             <div className="absolute inset-0 bg-gradient-to-r from-security/5 to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             <Shield className="w-5 h-5 mr-2 group-hover:animate-pulse relative z-10" />
