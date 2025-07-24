@@ -38,7 +38,7 @@ const Index = () => {
           <Button
             variant="primary"
             size="lg"
-            className="group relative overflow-hidden bg-gradient-to-r from-primary to-primary-glow hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 transform hover:scale-105 flex-1"
+            className="group relative overflow-hidden bg-gradient-to-r from-primary to-primary-glow hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 transform hover:scale-105"
             onClick={() => navigate("/learn-more")}
           >
             <div className="absolute inset-0 bg-gradient-to-r from-primary-glow to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -49,7 +49,7 @@ const Index = () => {
           <Button
             variant="outline"
             size="lg"
-            className="group relative overflow-hidden border-2 border-security/30 hover:border-security/60 hover:bg-security-muted/30 backdrop-blur-sm transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-security/20 flex-1"
+            className="group relative overflow-hidden border-2 border-security/30 hover:border-security/60 hover:bg-security-muted/30 backdrop-blur-sm transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-security/20"
             onClick={() => navigate("/portfolio")}
           >
             <div className="absolute inset-0 bg-gradient-to-r from-security/5 to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -61,7 +61,7 @@ const Index = () => {
           <Button
             variant="outline"
             size="lg"
-            className="group relative overflow-hidden border-2 border-security/30 hover:border-security/60 hover:bg-security-muted/30 backdrop-blur-sm transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-security/20 flex-1"
+            className="group relative overflow-hidden border-2 border-security/30 hover:border-security/60 hover:bg-security-muted/30 backdrop-blur-sm transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-security/20"
             onClick={() => navigate("/contact")}
           >
             <div className="absolute inset-0 bg-gradient-to-r from-security/5 to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -71,29 +71,29 @@ const Index = () => {
         </div>
 
         {/* Feature Highlights */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl text-center">
-          <div className="flex flex-col items-center space-y-3">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl">
+          <div className="flex flex-col items-center space-y-3 min-h-[160px]">
             <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-security/20 flex items-center justify-center">
               <Shield className="w-6 h-6 text-primary" />
             </div>
-            <h3 className="font-semibold text-foreground">Comprehensive Testing</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed max-w-48">Unit tests and invariant testing to catch vulnerabilities early</p>
+            <h3 className="font-semibold text-foreground text-center">Comprehensive Testing</h3>
+            <p className="text-sm text-muted-foreground leading-relaxed text-center">Unit tests and invariant testing to catch vulnerabilities early</p>
           </div>
 
-          <div className="flex flex-col items-center space-y-3">
+          <div className="flex flex-col items-center space-y-3 min-h-[160px]">
             <div className="w-12 h-12 rounded-full bg-gradient-to-br from-security/20 to-primary/20 flex items-center justify-center">
               <DollarSign className="w-6 h-6 text-security" />
             </div>
-            <h3 className="font-semibold text-foreground">Audit Smarter, Not Harder</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed max-w-48">Well-prepared code lets you book fewer hours with better outcomes.</p>
+            <h3 className="font-semibold text-foreground text-center">Audit Smarter, Not Harder</h3>
+            <p className="text-sm text-muted-foreground leading-relaxed text-center">Well-prepared code lets you book fewer hours with better outcomes.</p>
           </div>
 
-          <div className="flex flex-col items-center space-y-3">
+          <div className="flex flex-col items-center space-y-3 min-h-[160px]">
             <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-security/20 flex items-center justify-center">
               <ExternalLink className="w-6 h-6 text-primary" />
             </div>
-            <h3 className="font-semibold text-foreground">Actionable Reports</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed max-w-48">Clear documentation with proof-of-concept scenarios</p>
+            <h3 className="font-semibold text-foreground text-center">Actionable Reports</h3>
+            <p className="text-sm text-muted-foreground leading-relaxed text-center">Clear documentation with proof-of-concept scenarios</p>
           </div>
         </div>
 
