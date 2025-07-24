@@ -7,7 +7,7 @@ const LearnMore = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-security-muted to-background">
-      <div className="container mx-auto px-6 py-12 max-w-4xl">
+      <div className="container mx-auto px-6 py-12 max-w-6xl">
         {/* Header */}
         <div className="mb-12">
           <Button 
