@@ -18,8 +18,8 @@ const Index = () => {
         {/* Brand Name */}
         <div className="relative mb-8">
           <h1 className="text-5xl md:text-7xl font-bold">
-            <span className="font-mono bg-gradient-to-r from-primary to-security bg-clip-text text-transparent">Pre</span>
-            <span className="font-serif bg-gradient-to-r from-security to-primary bg-clip-text text-transparent">Audit</span>
+            <span className="font-serif italic font-normal bg-gradient-to-r from-primary to-security bg-clip-text text-transparent">Pre</span>
+            <span className="font-mono font-black bg-gradient-to-r from-security to-primary bg-clip-text text-transparent">Audit</span>
           </h1>
           <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-security/20 rounded-lg blur-xl opacity-30" />
         </div>
