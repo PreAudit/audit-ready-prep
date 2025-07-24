@@ -42,9 +42,24 @@ const LearnMore = () => {
           {/* Why Use PreAudit */}
           <section className="p-8 rounded-lg bg-card/50 border border-security/10 backdrop-blur-sm">
             <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">Why Use PreAudit?</h2>
-            <p className="text-lg text-foreground/80 leading-relaxed">
-              Traditional security audits typically span just one or two weeks — a short window to uncover and understand complex risks. If that time is spent on surface-level issues, deeper flaws may go undetected. <strong>PreAudit</strong> reduces the overall vulnerability load by catching a wide range of issues early — from the simple to the subtle — allowing auditors to concentrate on reviewing your protocol’s most intricate and high-impact logic.
-            </p>
+            <ul className="space-y-4 text-lg text-foreground/80">
+              <li className="flex items-start">
+                <div className="w-2 h-2 rounded-full bg-gradient-to-r from-primary to-security mt-3 mr-3 flex-shrink-0"></div>
+                <span>Traditional security audits typically span just one or two weeks — a short window to uncover complex risks</span>
+              </li>
+              <li className="flex items-start">
+                <div className="w-2 h-2 rounded-full bg-gradient-to-r from-primary to-security mt-3 mr-3 flex-shrink-0"></div>
+                <span>Time spent on surface-level issues means deeper flaws may go undetected</span>
+              </li>
+              <li className="flex items-start">
+                <div className="w-2 h-2 rounded-full bg-gradient-to-r from-primary to-security mt-3 mr-3 flex-shrink-0"></div>
+                <span><strong>PreAudit</strong> reduces vulnerability load by catching issues early — from simple to subtle</span>
+              </li>
+              <li className="flex items-start">
+                <div className="w-2 h-2 rounded-full bg-gradient-to-r from-primary to-security mt-3 mr-3 flex-shrink-0"></div>
+                <span>Allows auditors to focus on your protocol's most intricate and high-impact logic</span>
+              </li>
+            </ul>
           </section>
 
           {/* Services Offered */}
