@@ -11,9 +11,9 @@ const LearnMore = () => {
         {/* Header */}
         <div className="mb-12">
           <Button 
-            variant="ghost" 
+            variant="outline" 
             onClick={() => navigate("/")}
-            className="mb-8 text-muted-foreground hover:text-foreground"
+            className="mb-8 border-security/30 hover:border-security/60 transition-colors"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Home

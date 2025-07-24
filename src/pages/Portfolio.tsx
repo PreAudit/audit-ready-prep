@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink, Shield, Bug, Calendar, Code, AlertTriangle } from "lucide-react";
+import { ExternalLink, Shield, Bug, Calendar, Code, AlertTriangle, ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const Portfolio = () => {
@@ -123,9 +123,10 @@ const Portfolio = () => {
           <Button 
             variant="outline" 
             onClick={() => navigate("/")}
-            className="mb-6 border-security/30 hover:border-security/60"
+            className="mb-8 border-security/30 hover:border-security/60 transition-colors"
           >
-            ← Back to Home
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            Back to Home
           </Button>
         </div>
 

@@ -10,9 +10,9 @@ const Contact = () => {
     <div className="min-h-screen bg-gradient-to-br from-background via-security-muted to-background">
       <div className="container mx-auto px-6 py-12 max-w-2xl">
         <Button 
-          variant="ghost" 
+          variant="outline" 
           onClick={() => navigate(-1)}
-          className="mb-8 text-muted-foreground hover:text-foreground"
+          className="mb-8 border-security/30 hover:border-security/60 transition-colors"
         >
           <ArrowLeft className="w-4 h-4 mr-2" />
           Back
