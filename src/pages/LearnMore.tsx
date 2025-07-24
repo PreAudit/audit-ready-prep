@@ -43,7 +43,7 @@ const LearnMore = () => {
           <section className="p-8 rounded-lg bg-card/50 border border-security/10 backdrop-blur-sm">
             <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">Why Use PreAudit?</h2>
             <p className="text-lg text-foreground/80 leading-relaxed">
-              Traditional security audits usually last just one or two weeks. During that limited time, auditors shouldn't waste valuable hours chasing basic issues. Moreover, protocols that come out of audits with numerous vulnerabilities statistically tend to have even more undiscovered bugs. With <strong>PreAudit</strong>, you eliminate common pitfalls beforehand, ensuring your auditors' time is spent on what matters most.
+              Traditional security audits typically span just one or two weeks — a short window to uncover and understand complex risks. If that time is spent on surface-level issues, deeper flaws may go undetected. <strong>PreAudit</strong> reduces the overall vulnerability load by catching a wide range of issues early — from the simple to the subtle — allowing auditors to concentrate on reviewing your protocol’s most intricate and high-impact logic.
             </p>
           </section>
 
