@@ -13,21 +13,21 @@ export function ThemeToggle() {
     <div className="fixed top-2 right-2 sm:top-4 sm:right-4 z-50">
       <button
         onClick={toggleTheme}
-        className={`relative w-16 h-8 sm:w-20 sm:h-10 rounded-full p-1 transition-all duration-500 ease-in-out ${
+        className={`relative w-12 h-6 sm:w-14 sm:h-7 rounded-full p-0.5 transition-all duration-500 ease-in-out ${
           theme === "dark" 
             ? "bg-primary" 
             : "bg-security"
         }`}
       >
         <div
-          className={`w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-white shadow-lg flex items-center justify-center transition-all duration-500 ease-in-out transform ${
-            theme === "dark" ? "translate-x-8 sm:translate-x-10" : "translate-x-0"
+          className={`w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-white shadow-lg flex items-center justify-center transition-all duration-500 ease-in-out transform ${
+            theme === "dark" ? "translate-x-6 sm:translate-x-7" : "translate-x-0"
           }`}
         >
-          <Sun className={`h-3 w-3 sm:h-4 sm:w-4 text-security transition-all duration-300 ${
+          <Sun className={`h-2.5 w-2.5 sm:h-3 sm:w-3 text-security transition-all duration-300 ${
             theme === "dark" ? "scale-0 rotate-90" : "scale-100 rotate-0"
           }`} />
-          <Moon className={`absolute h-3 w-3 sm:h-4 sm:w-4 text-primary transition-all duration-300 ${
+          <Moon className={`absolute h-2.5 w-2.5 sm:h-3 sm:w-3 text-primary transition-all duration-300 ${
             theme === "dark" ? "scale-100 rotate-0" : "scale-0 -rotate-90"
           }`} />
         </div>
