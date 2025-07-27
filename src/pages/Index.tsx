@@ -19,17 +19,6 @@ const Index = () => {
       {/* Hero Section */}
       <div className="container mx-auto px-6 py-20 flex flex-col items-center justify-center min-h-screen text-center relative z-10">
 
-        {/* Hero Visual */}
-        <div className="mb-8 w-full max-w-2xl animate-fade-in">
-          <div className="w-full h-64 md:h-80 rounded-2xl shadow-2xl bg-gradient-to-br from-primary/20 via-security/15 to-primary/10 flex items-center justify-center border border-primary/20">
-            <div className="text-center">
-              <Shield className="w-16 h-16 md:w-20 md:h-20 text-primary mx-auto mb-4" />
-              <h2 className="text-xl md:text-2xl font-semibold text-primary">Smart Contract Security</h2>
-              <p className="text-muted-foreground mt-2">Expert Testing & Auditing</p>
-            </div>
-          </div>
-        </div>
-
         {/* Brand Name */}
         <div className="relative mb-8 animate-fade-in-up">
           <h1 className="text-5xl md:text-7xl font-bold text-primary">
