@@ -1,11 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { OptimizedImage } from "@/components/ui/optimized-image";
+import { useAnalytics } from "@/components/Analytics";
 import { ExternalLink, Shield, Zap, DollarSign, Mail } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const Index = () => {
   const navigate = useNavigate();
+  const { trackEvent } = useAnalytics();
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-security-muted to-background relative overflow-hidden">
@@ -44,7 +46,10 @@ const Index = () => {
             variant="primary"
             size="lg"
             className="group relative overflow-hidden bg-gradient-to-r from-primary to-primary-glow hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 transform hover:scale-105"
-            onClick={() => navigate("/learn-more")}
+            onClick={async () => {
+              await trackEvent('cta_click', { button: 'learn_more', location: 'hero' });
+              navigate("/learn-more");
+            }}
           >
             <div className="absolute inset-0 bg-gradient-to-r from-primary-glow to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             <Zap className="w-5 h-5 mr-2 group-hover:animate-pulse relative z-10" />
@@ -55,7 +60,10 @@ const Index = () => {
             variant="outline"
             size="lg"
             className="group relative overflow-hidden border-2 border-security/30 hover:border-security/60 hover:bg-security-muted/30 backdrop-blur-sm transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-security/20"
-            onClick={() => navigate("/portfolio")}
+            onClick={async () => {
+              await trackEvent('cta_click', { button: 'portfolio', location: 'hero' });
+              navigate("/portfolio");
+            }}
           >
             <div className="absolute inset-0 bg-gradient-to-r from-security/5 to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             <Shield className="w-5 h-5 mr-2 group-hover:animate-pulse relative z-10" />
@@ -66,7 +74,10 @@ const Index = () => {
             variant="outline"
             size="lg"
             className="group relative overflow-hidden border-2 border-security/30 hover:border-security/60 hover:bg-security-muted/30 backdrop-blur-sm transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-security/20"
-            onClick={() => navigate("/contact")}
+            onClick={async () => {
+              await trackEvent('cta_click', { button: 'contact', location: 'hero' });
+              navigate("/contact");
+            }}
           >
             <div className="absolute inset-0 bg-gradient-to-r from-security/5 to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             <Mail className="w-5 h-5 mr-2 group-hover:animate-pulse relative z-10" />
