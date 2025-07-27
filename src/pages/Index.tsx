@@ -3,8 +3,6 @@ import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { OptimizedImage } from "@/components/ui/optimized-image";
 import { ExternalLink, Shield, Zap, DollarSign, Mail } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import heroImage from "@/assets/preaudit-hero-banner.jpg";
-import techPattern from "@/assets/tech-pattern-bg.jpg";
 
 const Index = () => {
   const navigate = useNavigate();
@@ -12,17 +10,6 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-security-muted to-background relative overflow-hidden">
       <ThemeToggle />
-      
-      {/* Background Image */}
-      <div className="absolute inset-0 opacity-5">
-        <OptimizedImage
-          src={techPattern}
-          alt="Technical background pattern"
-          priority={true}
-          className="w-full h-full object-cover"
-          placeholder="blur"
-        />
-      </div>
       
       {/* Background Effects */}
       <div className="absolute inset-0 bg-grid-pattern opacity-[0.02]" />
@@ -32,16 +19,15 @@ const Index = () => {
       {/* Hero Section */}
       <div className="container mx-auto px-6 py-20 flex flex-col items-center justify-center min-h-screen text-center relative z-10">
 
-        {/* Hero Image */}
+        {/* Hero Visual */}
         <div className="mb-8 w-full max-w-2xl animate-fade-in">
-          <OptimizedImage
-            src={heroImage}
-            alt="PreAudit - Smart Contract Security Testing"
-            priority={true}
-            className="w-full h-64 md:h-80 rounded-2xl shadow-2xl"
-            placeholder="blur"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 60vw"
-          />
+          <div className="w-full h-64 md:h-80 rounded-2xl shadow-2xl bg-gradient-to-br from-primary/20 via-security/15 to-primary/10 flex items-center justify-center border border-primary/20">
+            <div className="text-center">
+              <Shield className="w-16 h-16 md:w-20 md:h-20 text-primary mx-auto mb-4" />
+              <h2 className="text-xl md:text-2xl font-semibold text-primary">Smart Contract Security</h2>
+              <p className="text-muted-foreground mt-2">Expert Testing & Auditing</p>
+            </div>
+          </div>
         </div>
 
         {/* Brand Name */}
