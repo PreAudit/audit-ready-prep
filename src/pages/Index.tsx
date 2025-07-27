@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
+import { OptimizedImage } from "@/components/ui/optimized-image";
 import { ExternalLink, Shield, Zap, DollarSign, Mail } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import heroImage from "@/assets/preaudit-hero-banner.jpg";
+import techPattern from "@/assets/tech-pattern-bg.jpg";
 
 const Index = () => {
   const navigate = useNavigate();
@@ -9,6 +12,18 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-security-muted to-background relative overflow-hidden">
       <ThemeToggle />
+      
+      {/* Background Image */}
+      <div className="absolute inset-0 opacity-5">
+        <OptimizedImage
+          src={techPattern}
+          alt="Technical background pattern"
+          priority={true}
+          className="w-full h-full object-cover"
+          placeholder="blur"
+        />
+      </div>
+      
       {/* Background Effects */}
       <div className="absolute inset-0 bg-grid-pattern opacity-[0.02]" />
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-primary/10 to-security/10 rounded-full blur-3xl" />
@@ -17,8 +32,20 @@ const Index = () => {
       {/* Hero Section */}
       <div className="container mx-auto px-6 py-20 flex flex-col items-center justify-center min-h-screen text-center relative z-10">
 
+        {/* Hero Image */}
+        <div className="mb-8 w-full max-w-2xl animate-fade-in">
+          <OptimizedImage
+            src={heroImage}
+            alt="PreAudit - Smart Contract Security Testing"
+            priority={true}
+            className="w-full h-64 md:h-80 rounded-2xl shadow-2xl"
+            placeholder="blur"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 60vw"
+          />
+        </div>
+
         {/* Brand Name */}
-        <div className="relative mb-8">
+        <div className="relative mb-8 animate-fade-in-up">
           <h1 className="text-5xl md:text-7xl font-bold text-primary">
             PreAudit
           </h1>
@@ -36,7 +63,8 @@ const Index = () => {
         </p>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-6 mb-20">
+        <div className="flex flex-col sm:flex-row gap-6 mb-20 animate-scale-in"
+             style={{ animationDelay: '0.3s', animationFillMode: 'both' }}>
           <Button
             variant="primary"
             size="lg"
@@ -72,7 +100,8 @@ const Index = () => {
         </div>
 
         {/* Feature Highlights */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl animate-fade-in-up"
+             style={{ animationDelay: '0.6s', animationFillMode: 'both' }}>
           <div className="flex flex-col items-center space-y-3 min-h-[160px]">
             <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-security/20 flex items-center justify-center">
               <Shield className="w-6 h-6 text-primary" />
