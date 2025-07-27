@@ -55,7 +55,6 @@ const Index = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-security/5 to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             <Shield className="w-5 h-5 mr-2 group-hover:animate-pulse relative z-10" />
             <span className="relative z-10">See our previous work</span>
-            <ExternalLink className="w-4 h-4 ml-2 relative z-10" />
           </Button>
 
           <Button
