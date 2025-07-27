@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import ContactForm from "@/components/ContactForm";
@@ -8,6 +9,7 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-security-muted to-background">
+      <ThemeToggle />
       <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-12 max-w-2xl">
         <Button 
           variant="outline" 

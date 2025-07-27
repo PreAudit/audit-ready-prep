@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Shield, Bug, Calendar, Code, AlertTriangle, ArrowLeft } from "lucide-react";
@@ -112,6 +113,7 @@ const Portfolio = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-security-muted to-background">
+      <ThemeToggle />
       {/* Background Effects */}
       <div className="absolute inset-0 bg-grid-pattern opacity-[0.02]" />
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-primary/10 to-security/10 rounded-full blur-3xl" />

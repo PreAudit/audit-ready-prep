@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { ArrowLeft, Shield, Clock, Users, TrendingUp } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
@@ -7,6 +8,7 @@ const LearnMore = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-security-muted to-background">
+      <ThemeToggle />
       <div className="container mx-auto px-6 py-12 max-w-6xl">
         {/* Header */}
         <div className="mb-12">
