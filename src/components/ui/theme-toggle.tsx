@@ -15,8 +15,8 @@ export function ThemeToggle() {
         onClick={toggleTheme}
         className={`relative w-16 h-8 sm:w-20 sm:h-10 rounded-full p-1 transition-all duration-500 ease-in-out ${
           theme === "dark" 
-            ? "bg-gradient-to-r from-blue-400 to-cyan-300" 
-            : "bg-gradient-to-r from-orange-400 to-pink-500"
+            ? "bg-gradient-to-r from-primary to-primary-glow" 
+            : "bg-gradient-to-r from-security to-security-muted"
         }`}
       >
         <div
@@ -24,10 +24,10 @@ export function ThemeToggle() {
             theme === "dark" ? "translate-x-8 sm:translate-x-10" : "translate-x-0"
           }`}
         >
-          <Sun className={`h-3 w-3 sm:h-4 sm:w-4 text-orange-500 transition-all duration-300 ${
+          <Sun className={`h-3 w-3 sm:h-4 sm:w-4 text-security transition-all duration-300 ${
             theme === "dark" ? "scale-0 rotate-90" : "scale-100 rotate-0"
           }`} />
-          <Moon className={`absolute h-3 w-3 sm:h-4 sm:w-4 text-blue-600 transition-all duration-300 ${
+          <Moon className={`absolute h-3 w-3 sm:h-4 sm:w-4 text-primary transition-all duration-300 ${
             theme === "dark" ? "scale-100 rotate-0" : "scale-0 -rotate-90"
           }`} />
         </div>
