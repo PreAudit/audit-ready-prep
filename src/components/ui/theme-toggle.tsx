@@ -15,8 +15,8 @@ export function ThemeToggle() {
         onClick={toggleTheme}
         className={`relative w-12 h-6 sm:w-14 sm:h-7 rounded-full p-0.5 transition-all duration-500 ease-in-out ${
           theme === "dark" 
-            ? "bg-primary" 
-            : "bg-security"
+            ? "bg-gradient-to-r from-primary to-primary-glow" 
+            : "bg-gradient-to-r from-security to-primary"
         }`}
       >
         <div
