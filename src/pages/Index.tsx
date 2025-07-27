@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { ExternalLink, Shield, Zap, DollarSign, Mail } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
@@ -7,6 +8,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-security-muted to-background relative overflow-hidden">
+      <ThemeToggle />
       {/* Background Effects */}
       <div className="absolute inset-0 bg-grid-pattern opacity-[0.02]" />
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-primary/10 to-security/10 rounded-full blur-3xl" />
