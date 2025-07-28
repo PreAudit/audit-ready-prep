@@ -49,37 +49,25 @@ const LearnMore = () => {
                 <div className="w-8 h-8 mr-4 mt-1 rounded-full bg-gradient-to-r from-primary to-security flex items-center justify-center flex-shrink-0">
                   <span className="text-white text-sm font-bold">•</span>
                 </div>
-                <div>
-                  <strong className="text-foreground">Comprehensive Unit Tests:</strong>
-                  <span className="text-foreground/80 ml-2">Extensive test suites to verify your project's functionality.</span>
-                </div>
+                <span className="text-lg text-foreground/80">Traditional security audits typically span just one or two weeks — a short window to uncover complex risks</span>
               </li>
               <li className="flex items-start">
                 <div className="w-8 h-8 mr-4 mt-1 rounded-full bg-gradient-to-r from-primary to-security flex items-center justify-center flex-shrink-0">
                   <span className="text-white text-sm font-bold">•</span>
                 </div>
-                <div>
-                  <strong className="text-foreground">Invariant and Fuzz Testing:</strong>
-                  <span className="text-foreground/80 ml-2">Rigorous campaigns that detect subtle and potentially damaging vulnerabilities.</span>
-                </div>
+                <span className="text-lg text-foreground/80">Time spent on surface-level issues means deeper flaws may go undetected</span>
               </li>
               <li className="flex items-start">
                 <div className="w-8 h-8 mr-4 mt-1 rounded-full bg-gradient-to-r from-primary to-security flex items-center justify-center flex-shrink-0">
                   <span className="text-white text-sm font-bold">•</span>
                 </div>
-                <div>
-                  <strong className="text-foreground">Clear and Actionable Reports:</strong>
-                  <span className="text-foreground/80 ml-2">Vulnerabilities documented with practical Proof-of-Concept (PoC) scenarios.</span>
-                </div>
+                <span className="text-lg text-foreground/80"><strong>PreAudit</strong> reduces vulnerability load by catching issues early — from simple to subtle</span>
               </li>
               <li className="flex items-start">
                 <div className="w-8 h-8 mr-4 mt-1 rounded-full bg-gradient-to-r from-primary to-security flex items-center justify-center flex-shrink-0">
                   <span className="text-white text-sm font-bold">•</span>
                 </div>
-                <div>
-                  <strong className="text-foreground">Reusable Repository:</strong>
-                  <span className="text-foreground/80 ml-2">A complete Git repository including all tests and scenarios for easy integration into your project's workflow.</span>
-                </div>
+                <span className="text-lg text-foreground/80">Allows auditors to focus on your protocol's most intricate and high-impact logic</span>
               </li>
             </ul>
           </section>
