@@ -49,7 +49,7 @@ const LearnMore = () => {
                 <div className="w-8 h-8 mr-4 mt-1 rounded-full bg-gradient-to-r from-primary to-security flex items-center justify-center flex-shrink-0">
                   <span className="text-white text-sm font-bold">•</span>
                 </div>
-                <span className="text-lg text-foreground/80">Traditional security audits typically span just one or two weeks — a short window to uncover complex risks</span>
+                <span className="text-lg text-foreground/80">PreAudit is a cost-effective step before the audit — a fraction of the price, with long-term security benefits</span>
               </li>
               <li className="flex items-start">
                 <div className="w-8 h-8 mr-4 mt-1 rounded-full bg-gradient-to-r from-primary to-security flex items-center justify-center flex-shrink-0">
