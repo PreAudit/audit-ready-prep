@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { MobileNavigation } from "@/components/MobileNavigation";
@@ -11,6 +12,10 @@ const Index = () => {
   const navigate = useNavigate();
   const { trackEvent } = useAnalytics();
   const isMobile = useIsMobile();
+
+  useEffect(() => {
+    document.title = "PreAudit - Smart Contract Security Testing & Audit Services";
+  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-security-muted to-background relative overflow-hidden">
