@@ -1,8 +1,17 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { Resend } from "npm:resend@2.0.0";
-import DOMPurify from "npm:dompurify@latest";
 
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
+
+// Simple HTML sanitization function
+const sanitizeInput = (input: string): string => {
+  return input
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+};
 
 // Rate limiting storage
 const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
@@ -69,11 +78,11 @@ const handler = async (req: Request): Promise<Response> => {
     console.log("Sending contact email with data:", { name, organization, contact, description, budget });
 
     // Sanitize inputs to prevent XSS
-    const sanitizedName = DOMPurify.sanitize(name);
-    const sanitizedOrganization = organization ? DOMPurify.sanitize(organization) : '';
-    const sanitizedContact = DOMPurify.sanitize(contact);
-    const sanitizedDescription = DOMPurify.sanitize(description.replace(/\n/g, '<br>'));
-    const sanitizedBudget = budget ? DOMPurify.sanitize(budget) : '';
+    const sanitizedName = sanitizeInput(name);
+    const sanitizedOrganization = organization ? sanitizeInput(organization) : '';
+    const sanitizedContact = sanitizeInput(contact);
+    const sanitizedDescription = sanitizeInput(description).replace(/\n/g, '<br>');
+    const sanitizedBudget = budget ? sanitizeInput(budget) : '';
 
     const emailResponse = await resend.emails.send({
       from: "Contact Form <onboarding@resend.dev>",
